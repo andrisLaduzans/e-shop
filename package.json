@@ -8,7 +8,9 @@
     "build": "parcel build index.html --no-cache",
     "serve": "cd dist && npx serve",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "dev-server": "cd server && npm run dev",
+    "start:dev": "concurrently --kill-others -n \"SERVER,APP\" \"npm:dev-server\" \"npm start\""
   },
   "keywords": [],
   "author": "",
