@@ -1,5 +1,11 @@
-import { Nav } from "~components";
+import { Header } from "~components/Header";
 
 export const App = () => {
-  return <Nav />;
+  return (
+    <Header
+      onLogin={() => null}
+      onLogout={() => null}
+      onCreateAccount={() => null}
+    />
+  );
 };
