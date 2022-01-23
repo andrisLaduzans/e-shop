@@ -12,6 +12,7 @@
     "dev-server": "cd server && npm run dev",
     "dev-server:build": "cd server && npm i && cd../",
     "start:dev": "concurrently --kill-others -n \"SERVER,APP\" \"npm:dev-server\" \"npm start\"",
+    "start:dev-storybook": "concurrently --kill-others -n \"STORYBOOK, APP\" \"npm:storybook\" \"npm start\"",
     "postinstall": "npm run dev-server:build"
   },
   "keywords": [],
