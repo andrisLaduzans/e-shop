@@ -13,7 +13,9 @@
     "dev-server:build": "cd server && npm i && cd ../",
     "start:dev": "concurrently --kill-others -n \"SERVER,APP\" \"npm:dev-server\" \"npm start\"",
     "start:dev-storybook": "concurrently --kill-others -n \"STORYBOOK, APP\" \"npm:storybook\" \"npm start\"",
-    "postinstall": "npm run dev-server:build"
+    "postinstall": "npm run dev-server:build",
+    "lint": "tsc --noEmit && eslint --ext .js,.ts,.tsx .",
+    "format": "prettier --ignore-path .gitignore --write \"**/*.+(js|ts|json)\""
   },
   "keywords": [],
   "author": "",
@@ -32,8 +34,14 @@
     "@storybook/react": "^6.4.14",
     "@types/react": "^17.0.38",
     "@types/react-dom": "^17.0.11",
+    "@typescript-eslint/eslint-plugin": "^5.10.0",
+    "@typescript-eslint/parser": "^5.10.0",
     "babel-loader": "^8.2.3",
     "babel-plugin-module-resolver": "^4.1.0",
-    "parcel-bundler": "^1.12.5"
+    "eslint": "^8.7.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-react": "^7.28.0",
+    "parcel-bundler": "^1.12.5",
+    "prettier": "^2.5.1"
   }
 }
