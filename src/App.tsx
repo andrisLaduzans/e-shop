@@ -1,11 +1,11 @@
-import { Header } from "~components/Header";
+import { Page } from '~components/Page';
 
 export const App = () => {
   return (
-    <Header
+    <Page
+      onCreateAccount={() => null}
       onLogin={() => null}
       onLogout={() => null}
-      onCreateAccount={() => null}
     />
   );
 };
